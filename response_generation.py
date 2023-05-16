@@ -8,7 +8,7 @@ def read_prompt():
     file.close()
     return prompt
   except FileNotFoundError:
-    return 'You are a friendly person that likes to joke a lot.'
+    return 'You will read a post from the subreddit and respond with a joke.'
 
 def generate_response(subreddit_name, post_content):
   prompt = f'You are within the {subreddit_name} subreddit. {read_prompt()}\n\n{post_content}'
